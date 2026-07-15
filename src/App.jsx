@@ -12,25 +12,26 @@ export default function App() {
   return (
     <div className="min-h-screen bg-white text-pawzy-dark font-sans flex flex-col">
       {/* HEADER / NAVBAR */}
-      <header className="absolute top-0 left-0 right-0 z-50 bg-[#e2eae6]/70 backdrop-blur-md transition-all duration-300">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <header className="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white/70 backdrop-blur-md shadow-sm border-b border-gray-100 h-20">
+        <div className="w-full max-w-7xl mx-auto px-6 lg:px-8 h-full flex items-center justify-between">
           {/* Logo */}
-          <a href="#" className="flex items-center gap-2">
-            <img src="/pawzy logo.png" alt="Pawzy Logo" className="h-9 w-auto" />
+          <a href="/" className="flex items-center gap-2 font-bold text-2xl text-[#102E39]" style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
+            <img src="https://res.cloudinary.com/dqsyzpxkg/image/upload/v1784019754/a44962e9-259e-4885-a21c-31063e437a8a.png" alt="Pawzy Logo" className="w-8 h-8 object-contain" />
+            <span className="text-[#23B4A2]">Pawzy</span>
           </a>
 
           {/* Navigation Links */}
-          <nav className="hidden md:flex items-center gap-8">
-            <a href="/" className="text-slate-700 hover:text-pawzy-green font-semibold transition-colors">Home</a>
-            <a href="#" className="text-slate-700 hover:text-pawzy-green font-semibold transition-colors">Service</a>
-            <a href="/features.html" className="text-slate-700 hover:text-pawzy-green font-semibold transition-colors">Features</a>
-            <a href="#about-us" className="text-slate-700 hover:text-pawzy-green font-semibold transition-colors">About us</a>
-            <a href="#" className="text-slate-700 hover:text-pawzy-green font-semibold transition-colors">Blog</a>
+          <nav className="hidden md:flex items-center gap-8" style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
+            <a href="/" className="text-[#383644] hover:text-[#23B4A2] font-medium text-[15px] transition-colors">Home</a>
+            <a href="#" className="text-[#383644] hover:text-[#23B4A2] font-medium text-[15px] transition-colors">Service</a>
+            <a href="/features.html" className="text-[#383644] hover:text-[#23B4A2] font-medium text-[15px] transition-colors">Features</a>
+            <a href="/about.html" className="text-[#23B4A2] font-medium text-[15px] transition-colors">About us</a>
+            <a href="#" className="text-[#383644] hover:text-[#23B4A2] font-medium text-[15px] transition-colors">Blog</a>
           </nav>
 
           {/* Action Button */}
           <div>
-            <button className="bg-pawzy-green hover:bg-pawzy-accent text-white font-medium px-5 py-2.5 rounded-xl transition-all duration-300 transform hover:scale-[1.02]">
+            <button className="text-white font-semibold text-[15px] px-5 py-2.5 rounded-lg transition-all duration-300 hover:opacity-90" style={{ background: '#23B4A2', fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
               Download App
             </button>
           </div>
@@ -328,7 +329,7 @@ export default function App() {
               {/* QR Code */}
               <div className="flex flex-col items-center gap-3">
                 <div className="w-40 h-40 bg-white/10 rounded-[24px] flex items-center justify-center p-3 backdrop-blur-sm border border-white/20">
-                  <img src="https://res.cloudinary.com/dqsyzpxkg/image/upload/v1784053537/356a515a-ca93-49ef-a639-3b0be381e15b.png" alt="QR Code" className="w-full h-full object-contain rounded-[16px]" />
+                  <img src="https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=MongoApp" alt="QR Code" className="w-full h-full object-contain rounded-[16px]" />
                 </div>
                 <p className="text-white font-semibold text-base tracking-wide">Scan to Download</p>
               </div>
@@ -343,74 +344,70 @@ export default function App() {
       </section>
 
       {/* FOOTER SECTION */}
-      <footer className="bg-white border-t border-slate-100/80 pt-20 pb-10 px-4 sm:px-6 lg:px-8 mt-auto">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8 mb-16 text-left">
+      <footer className="bg-white pt-16 pb-8 mt-auto font-jakarta" style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8 mb-16 text-left">
             {/* Column 1: Brand Info */}
-            <div className="lg:col-span-4 flex flex-col items-start">
-              <div className="flex items-center gap-2.5 mb-5">
-                <img src="/Mongo logo.png" alt="Mongo Logo" className="w-8 h-8" />
-                <span className="font-jakarta text-2xl font-bold text-slate-800">Mongo</span>
+            <div className="lg:col-span-4 flex flex-col items-start pr-8">
+              <div className="flex items-center gap-3 mb-6">
+                <img src="https://res.cloudinary.com/dqsyzpxkg/image/upload/v1784019754/a44962e9-259e-4885-a21c-31063e437a8a.png" alt="Mongo Logo" className="w-9 h-9 object-contain" />
+                <span className="text-[28px] font-bold text-[#102E39]">Mongo</span>
               </div>
-              <p className="text-slate-500 text-sm leading-relaxed mb-6 max-w-xs font-medium">
-                Better care. Happier pets. Stronger bond.
+              <p className="text-[#6B7B85] text-[16px] leading-[1.6] mb-8">
+                Better care. Happier pets.<br />Stronger bond.
               </p>
-              {/* Social links matching footer.png letter icons */}
-              <div className="flex items-center gap-2.5">
-                <span className="w-8 h-8 rounded-full bg-slate-50 border border-slate-100 flex items-center justify-center text-xs font-semibold text-slate-500 hover:bg-slate-100 hover:text-slate-700 cursor-pointer transition-colors select-none">
-                  f
-                </span>
-                <span className="w-8 h-8 rounded-full bg-slate-50 border border-slate-100 flex items-center justify-center text-xs font-semibold text-slate-500 hover:bg-slate-100 hover:text-slate-700 cursor-pointer transition-colors select-none">
-                  t
-                </span>
-                <span className="w-8 h-8 rounded-full bg-slate-50 border border-slate-100 flex items-center justify-center text-xs font-semibold text-slate-500 hover:bg-slate-100 hover:text-slate-700 cursor-pointer transition-colors select-none">
-                  i
-                </span>
+              {/* Social icons */}
+              <div className="flex items-center gap-3">
+                <a href="#" className="w-10 h-10 rounded-full bg-[#F5F7F9] flex items-center justify-center text-[#6B7B85] font-bold hover:bg-[#51D0B3] hover:text-white transition-colors text-[16px]">f</a>
+                <a href="#" className="w-10 h-10 rounded-full bg-[#F5F7F9] flex items-center justify-center text-[#6B7B85] font-bold hover:bg-[#51D0B3] hover:text-white transition-colors text-[16px]">t</a>
+                <a href="#" className="w-10 h-10 rounded-full bg-[#F5F7F9] flex items-center justify-center text-[#6B7B85] font-bold hover:bg-[#51D0B3] hover:text-white transition-colors text-[16px]">i</a>
               </div>
             </div>
 
             {/* Column 2: Quick Links */}
             <div className="lg:col-span-2">
-              <h4 className="text-slate-800 font-bold text-sm tracking-wider uppercase mb-5">Quick Links</h4>
-              <ul className="space-y-3.5 text-slate-500 text-sm font-medium">
-                <li><a href="#" className="hover:text-pawzy-green transition-colors">Home</a></li>
-                <li><a href="#" className="hover:text-pawzy-green transition-colors">Services</a></li>
-                <li><a href="#" className="hover:text-pawzy-green transition-colors">How It Works</a></li>
-                <li><a href="#" className="hover:text-pawzy-green transition-colors">Reviews</a></li>
-                <li><a href="#" className="hover:text-pawzy-green transition-colors">Blog</a></li>
+              <h4 className="text-[#102E39] font-bold text-[18px] mb-6">Quick Links</h4>
+              <ul className="space-y-4">
+                <li><a href="#" className="text-[#6B7B85] text-[16px] hover:text-[#51D0B3] transition-colors">Home</a></li>
+                <li><a href="#" className="text-[#6B7B85] text-[16px] hover:text-[#51D0B3] transition-colors">Services</a></li>
+                <li><a href="#" className="text-[#6B7B85] text-[16px] hover:text-[#51D0B3] transition-colors">How It Works</a></li>
+                <li><a href="#" className="text-[#6B7B85] text-[16px] hover:text-[#51D0B3] transition-colors">Reviews</a></li>
+                <li><a href="#" className="text-[#6B7B85] text-[16px] hover:text-[#51D0B3] transition-colors">Blog</a></li>
               </ul>
             </div>
 
             {/* Column 3: Company */}
-            <div className="lg:col-span-2">
-              <h4 className="text-slate-800 font-bold text-sm tracking-wider uppercase mb-5">Company</h4>
-              <ul className="space-y-3.5 text-slate-500 text-sm font-medium">
-                <li><a href="#about-us" className="hover:text-pawzy-green transition-colors">About Us</a></li>
-                <li><a href="#" className="hover:text-pawzy-green transition-colors">Careers</a></li>
-                <li><a href="#" className="hover:text-pawzy-green transition-colors">Partners</a></li>
-                <li><a href="#" className="hover:text-pawzy-green transition-colors">Terms of Service</a></li>
-                <li><a href="#" className="hover:text-pawzy-green transition-colors">Privacy Policy</a></li>
+            <div className="lg:col-span-3">
+              <h4 className="text-[#102E39] font-bold text-[18px] mb-6">Company</h4>
+              <ul className="space-y-4">
+                <li><a href="/about.html" className="text-[#6B7B85] text-[16px] hover:text-[#51D0B3] transition-colors">About Us</a></li>
+                <li><a href="#" className="text-[#6B7B85] text-[16px] hover:text-[#51D0B3] transition-colors">Careers</a></li>
+                <li><a href="#" className="text-[#6B7B85] text-[16px] hover:text-[#51D0B3] transition-colors">Partners</a></li>
+                <li><a href="#" className="text-[#6B7B85] text-[16px] hover:text-[#51D0B3] transition-colors">Terms of Service</a></li>
+                <li><a href="#" className="text-[#6B7B85] text-[16px] hover:text-[#51D0B3] transition-colors">Privacy Policy</a></li>
               </ul>
             </div>
 
             {/* Column 4: Newsletter */}
-            <div className="lg:col-span-4 flex flex-col items-start">
-              <h4 className="text-slate-800 font-bold text-sm tracking-wider uppercase mb-5">Stay in the loop</h4>
-              <p className="text-slate-500 text-sm leading-relaxed mb-5 font-medium">
-                Get pet care tips, offers and updates straight to your inbox.
+            <div className="lg:col-span-3 flex flex-col items-start">
+              <h4 className="text-[#102E39] font-bold text-[18px] mb-6">Stay in the loop</h4>
+              <p className="text-[#6B7B85] text-[16px] leading-[1.6] mb-6 -mt-2">
+                Get pet care tips, offers and updates<br className="hidden lg:block"/>straight to your inbox.
               </p>
-              <form onSubmit={handleSubscribe} className="w-full flex flex-col gap-3">
+              <form onSubmit={handleSubscribe} className="w-full flex flex-col gap-4">
                 <input
                   type="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="Enter your email"
                   required
-                  className="bg-slate-50/50 border border-slate-100 hover:border-slate-200 focus:border-pawzy-green rounded-xl px-4 py-3.5 text-sm w-full focus:outline-none transition-all"
+                  className="bg-[#F8F9FA] h-[56px] rounded-xl px-5 text-[16px] text-[#102E39] w-full focus:outline-none placeholder-[#9BA5AD]"
+                  style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}
                 />
                 <button
                   type="submit"
-                  className="bg-[#48d0be] hover:bg-pawzy-accent text-white font-semibold py-3 px-5 rounded-xl w-full transition-all duration-300 transform active:scale-[0.99] shadow-sm tracking-wide text-sm"
+                  className="bg-[#51D0B3] hover:bg-[#42C2A3] h-[56px] text-white font-bold rounded-xl w-full transition-colors text-[16px]"
+                  style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}
                 >
                   Subscribe
                 </button>
@@ -418,14 +415,11 @@ export default function App() {
             </div>
           </div>
 
-          {/* Divider Line */}
-          <div className="border-t border-slate-100 my-8"></div>
-
           {/* Bottom Copyright Text */}
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
-            <span className="text-[11px] font-bold text-slate-400 tracking-wider uppercase select-none">
-              © 2025 MONGO. ALL RIGHTS RESERVED.
-            </span>
+          <div className="border-t border-dashed border-[#E5E9EB] pt-8 mt-14 text-left">
+            <p className="text-[14px] font-semibold text-[#9BA5AD] tracking-[0.5px]">
+              © 2025 PAWMATE. ALL RIGHTS RESERVED.
+            </p>
           </div>
         </div>
       </footer>

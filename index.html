@@ -671,7 +671,7 @@
                     </div>
                     <div class="download-qr-group">
                         <div class="qr-placeholder">
-                            <img src="https://res.cloudinary.com/dqsyzpxkg/image/upload/v1784053537/356a515a-ca93-49ef-a639-3b0be381e15b.png" alt="Scan QR Code" style="width: 100%; height: 100%; object-fit: contain; padding: 16px; box-sizing: border-box;" />
+                            <img src="https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=MongoApp" alt="Scan QR Code" style="width: 100%; height: 100%; object-fit: contain; padding: 16px; box-sizing: border-box;" />
                         </div>
                         <p class="qr-text">Scan to Download</p>
                     </div>
@@ -712,7 +712,7 @@
                 <div class="footer-col links-col company-col">
                     <h4>Company</h4>
                     <ul>
-                        <li><a href="#">About Us</a></li>
+                        <li><a href="/about.html">About Us</a></li>
                         <li><a href="#">Careers</a></li>
                         <li><a href="#">Partners</a></li>
                         <li><a href="#">Terms of Service</a></li>
@@ -759,16 +759,26 @@
                     icon.classList.add('minus');
                     icon.textContent = '-';
                 }
+                
+                // Update height after accordion toggle (use timeout to allow transition if any)
+                setTimeout(resizeToFit, 300);
             });
         });
 
         function resizeToFit() {
             const container = document.querySelector('.screen-container');
+            if (!container) return;
             const scale = window.innerWidth / 1920;
             container.style.transform = `scale(${scale})`;
-            document.body.style.height = `${6900 * scale}px`;
+            document.body.style.height = `${container.offsetHeight * scale}px`;
         }
         window.addEventListener('resize', resizeToFit);
+        
+        // Also observe container for dynamic height changes
+        const observer = new ResizeObserver(resizeToFit);
+        const container = document.querySelector('.screen-container');
+        if (container) observer.observe(container);
+        
         resizeToFit();
     </script>
 </body>

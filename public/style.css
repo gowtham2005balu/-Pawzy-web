@@ -25,7 +25,9 @@ body {
 .screen-container {
     width: 1920px;
     height: 6900px;
-    position: relative;
+    position: absolute;
+    top: 0;
+    left: 0;
     transform-origin: top left;
     overflow: hidden;
 }
