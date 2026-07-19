@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply text-pawzy-dark bg-white font-sans;
+    @apply text-mongo-dark bg-white font-sans;
   }
 
   h1,
@@ -14,7 +14,7 @@
   h5,
   h6 {
     font-family: 'Plus Jakarta Sans', sans-serif;
-    @apply font-semibold text-pawzy-dark;
+    @apply font-semibold text-mongo-dark;
   }
 }
 

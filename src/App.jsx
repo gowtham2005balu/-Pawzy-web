@@ -10,14 +10,14 @@ export default function App() {
   }
 
   return (
-    <div className="min-h-screen bg-white text-pawzy-dark font-sans flex flex-col">
+    <div className="min-h-screen bg-white text-mongo-dark font-sans flex flex-col">
       {/* HEADER / NAVBAR */}
       <header className="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white/70 backdrop-blur-md shadow-sm border-b border-gray-100 h-20">
         <div className="w-full max-w-7xl mx-auto px-6 lg:px-8 h-full flex items-center justify-between">
           {/* Logo */}
           <a href="/" className="flex items-center gap-2 font-bold text-2xl text-[#102E39]" style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
-            <img src="https://res.cloudinary.com/dqsyzpxkg/image/upload/v1784019754/a44962e9-259e-4885-a21c-31063e437a8a.png" alt="Pawzy Logo" className="w-8 h-8 object-contain" />
-            <span className="text-[#23B4A2]">Pawzy</span>
+            <img src="https://res.cloudinary.com/dqsyzpxkg/image/upload/v1784019754/a44962e9-259e-4885-a21c-31063e437a8a.png" alt="Mongo Logo" className="w-8 h-8 object-contain" />
+            <span className="text-[#23B4A2]">Mongo</span>
           </a>
 
           {/* Navigation Links */}
@@ -62,7 +62,7 @@ export default function App() {
 
             {/* Subtext */}
             <p className="text-sm sm:text-base text-white/95 leading-relaxed mb-8 max-w-md drop-shadow-sm font-normal">
-              Pawzy was born out of a simple belief – pets deserve the best care and love, always. We make pet care easy, reliable, and stress-free for pet parents.
+              Mongo was born out of a simple belief – pets deserve the best care and love, always. We make pet care easy, reliable, and stress-free for pet parents.
             </p>
 
             {/* Floating Card */}
@@ -86,7 +86,7 @@ export default function App() {
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
           {/* Card 1: Our Mission */}
           <div className="bg-[#f2fcfb] p-8 sm:p-12 lg:p-16 rounded-[2.5rem] flex flex-col items-start text-left border border-emerald-50 hover:shadow-md transition-shadow duration-300">
-            <div className="w-14 h-14 rounded-full bg-white flex items-center justify-center shadow-sm text-pawzy-green mb-8">
+            <div className="w-14 h-14 rounded-full bg-white flex items-center justify-center shadow-sm text-mongo-green mb-8">
               {/* Flag icon */}
               <svg className="w-6 h-6 stroke-current fill-none stroke-2" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M3 21v-19m0 0h14.5l-2.5 4 2.5 4h-14.5" />
@@ -100,7 +100,7 @@ export default function App() {
 
           {/* Card 2: Our Vision */}
           <div className="bg-[#f2fcfb] p-8 sm:p-12 lg:p-16 rounded-[2.5rem] flex flex-col items-start text-left border border-emerald-50 hover:shadow-md transition-shadow duration-300">
-            <div className="w-14 h-14 rounded-full bg-white flex items-center justify-center shadow-sm text-pawzy-green mb-8">
+            <div className="w-14 h-14 rounded-full bg-white flex items-center justify-center shadow-sm text-mongo-green mb-8">
               {/* Eye icon */}
               <svg className="w-6 h-6 stroke-current fill-none stroke-2" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
@@ -202,7 +202,7 @@ export default function App() {
               As pet parents ourselves, we understand the worry that comes with leaving your pets behind. Finding reliable care shouldn't be difficult.
             </p>
             <p className="text-slate-500 text-base sm:text-[17px] leading-relaxed mb-10 font-normal">
-              That's why we created Pawzy – to bring convenience, trust, and love together in one place.
+              That's why we created Mongo – to bring convenience, trust, and love together in one place.
             </p>
 
             {/* Bottom Thank You message */}
@@ -235,7 +235,7 @@ export default function App() {
         </div>
       </section>
 
-      {/* THE PAWZY TEAM SECTION */}
+      {/* THE MONGO TEAM SECTION */}
       <section className="bg-white py-24 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto mt-16">
           {/* Light teal background block */}
@@ -243,7 +243,7 @@ export default function App() {
             {/* Left side: Heading and Description */}
             <div className="lg:col-span-5 flex flex-col items-start text-left pr-4">
               <h2 className="text-3.5xl sm:text-4xl lg:text-[40px] font-bold text-slate-800 mb-4 leading-tight font-jakarta">
-                The Pawzy Team
+                The Mongo Team
               </h2>
               <p className="text-slate-500 text-sm sm:text-base leading-relaxed font-medium">
                 Pet lovers. Problem solvers. Care partners. We're a team of passionate people working every day to make pet care better for everyone.

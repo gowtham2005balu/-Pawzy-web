@@ -7,7 +7,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        pawzy: {
+        mongo: {
           green: '#2bc2a7',
           dark: '#1e293b',
           gray: '#475569',
