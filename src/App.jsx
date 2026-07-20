@@ -26,7 +26,7 @@ export default function App() {
             <a href="#" className="text-[#383644] hover:text-[#23B4A2] font-medium text-[15px] transition-colors">Service</a>
             <a href="/features.html" className="text-[#383644] hover:text-[#23B4A2] font-medium text-[15px] transition-colors">Features</a>
             <a href="/about.html" className="text-[#23B4A2] font-medium text-[15px] transition-colors">About us</a>
-            <a href="#" className="text-[#383644] hover:text-[#23B4A2] font-medium text-[15px] transition-colors">Blog</a>
+            <a href="/careers.html" className="text-[#383644] hover:text-[#23B4A2] font-medium text-[15px] transition-colors">Careers</a>
           </nav>
 
           {/* Action Button */}
@@ -310,7 +310,7 @@ export default function App() {
               <img src="https://res.cloudinary.com/dqsyzpxkg/image/upload/v1784028918/328e2875-ed9e-412d-9d57-30632063e8a6.png" alt="" className="absolute -top-20 -left-10 w-48 opacity-100 transform rotate-[17deg]" />
               <img src="https://res.cloudinary.com/dqsyzpxkg/image/upload/v1784028918/328e2875-ed9e-412d-9d57-30632063e8a6.png" alt="" className="absolute top-0 right-10 w-48 opacity-100 transform -rotate-[21deg]" />
             </div>
-            
+
             {/* Left Content */}
             <div className="relative z-10 flex flex-col lg:flex-row items-center gap-12 lg:gap-20 w-full lg:w-auto">
               <div className="flex flex-col gap-6 max-w-md text-center lg:text-left">
@@ -325,7 +325,7 @@ export default function App() {
                   </a>
                 </div>
               </div>
-              
+
               {/* QR Code */}
               <div className="flex flex-col items-center gap-3">
                 <div className="w-40 h-40 bg-white/10 rounded-[24px] flex items-center justify-center p-3 backdrop-blur-sm border border-white/20">
@@ -372,7 +372,7 @@ export default function App() {
                 <li><a href="#" className="text-[#6B7B85] text-[16px] hover:text-[#51D0B3] transition-colors">Services</a></li>
                 <li><a href="#" className="text-[#6B7B85] text-[16px] hover:text-[#51D0B3] transition-colors">How It Works</a></li>
                 <li><a href="#" className="text-[#6B7B85] text-[16px] hover:text-[#51D0B3] transition-colors">Reviews</a></li>
-                <li><a href="#" className="text-[#6B7B85] text-[16px] hover:text-[#51D0B3] transition-colors">Blog</a></li>
+                <li><a href="/blog.html" className="text-[#6B7B85] text-[16px] hover:text-[#51D0B3] transition-colors">Blog</a></li>
               </ul>
             </div>
 
@@ -392,7 +392,7 @@ export default function App() {
             <div className="lg:col-span-3 flex flex-col items-start">
               <h4 className="text-[#102E39] font-bold text-[18px] mb-6">Stay in the loop</h4>
               <p className="text-[#6B7B85] text-[16px] leading-[1.6] mb-6 -mt-2">
-                Get pet care tips, offers and updates<br className="hidden lg:block"/>straight to your inbox.
+                Get pet care tips, offers and updates<br className="hidden lg:block" />straight to your inbox.
               </p>
               <form onSubmit={handleSubscribe} className="w-full flex flex-col gap-4">
                 <input

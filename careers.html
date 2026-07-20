@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Careers at Mongo</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chewy&family=Plus+Jakarta+Sans:wght@400;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="screen-container" style="min-height: 1088px; height: auto; display: flex; flex-direction: column; position: relative;">
+
+        <nav class="navbar">
+            <div class="logo">
+                <div class="logo-icon">
+                    <img src="https://res.cloudinary.com/dqsyzpxkg/image/upload/v1784019754/a44962e9-259e-4885-a21c-31063e437a8a.png"
+                        alt="Mongo Logo" style="width: 100%; height: 100%; object-fit: contain;">
+                </div>
+                <span>Mongo</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="#">Service</a></li>
+                <li><a href="/features.html">Features</a></li>
+                <li><a href="/about.html">About us</a></li>
+                <li><a href="/careers.html" class="active">Careers</a></li>
+            </ul>
+            <a href="#" class="btn btn-primary">Download App</a>
+        </nav>
+
+        <!-- React Mount Point for Careers content -->
+        <div id="root" style="flex: 1; display: flex; flex-direction: column;"></div>
+
+
+    <!-- Mount React Component -->
+    <script type="module">
+        import React from 'react'
+        import ReactDOM from 'react-dom/client'
+        import Careers from './src/Careers.jsx'
+        import './src/index.css'
+
+        ReactDOM.createRoot(document.getElementById('root')).render(
+            React.createElement(React.StrictMode, null,
+                React.createElement(Careers)
+            )
+        )
+    </script>
+
+    <script>
+        function resizeToFit() {
+            const container = document.querySelector('.screen-container');
+            if (!container) return;
+            const scale = window.innerWidth / 1920;
+            container.style.transform = `scale(${scale})`;
+            container.style.transformOrigin = 'top left';
+            document.body.style.height = `${container.offsetHeight * scale}px`;
+        }
+        window.addEventListener('resize', resizeToFit);
+
+        const observer = new ResizeObserver(resizeToFit);
+        const container = document.querySelector('.screen-container');
+        if (container) observer.observe(container);
+
+        resizeToFit();
+    </script>
+</body>
+
+</html>
