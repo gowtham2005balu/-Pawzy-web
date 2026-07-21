@@ -773,8 +773,8 @@ body {
 }
 
 .hiw-step-icon {
-    width: 100px;
-    height: 100px;
+    width: 180px;
+    height: 180px;
     object-fit: contain;
     object-position: left top;
     margin-top: 10px;
@@ -1656,7 +1656,7 @@ body {
 
 /* Feature Page Specific Styles */
 .fh-page {
-    height: auto; 
+    height: auto;
     min-height: 1080px;
     background: #F8FDFB;
 }
@@ -1807,7 +1807,11 @@ body {
     flex-direction: row-reverse;
 }
 
-.fs-card-vet { width: 1442px; min-height: 616px; padding: 40px 60px; }
+.fs-card-vet {
+    width: 1442px;
+    min-height: 616px;
+    padding: 40px 60px;
+}
 
 .fs-content {
     width: 500px;
@@ -1902,40 +1906,130 @@ body {
 }
 
 /* Themes */
-.fs-card-vet { background-color: #F0FAF9; }
-.fs-card-vet .fs-icon-circle { background-color: #2AC5B3; color: white; }
-.fs-card-vet .fs-num { color: #2AC5B3; }
-.fs-card-vet .fs-name { color: #102E39; }
-.fs-card-vet .fs-features li::before { background-color: #2AC5B3; }
-.fs-card-vet .fs-btn { background-color: #2AC5B3; }
+.fs-card-vet {
+    background-color: #F0FAF9;
+}
 
-.fs-card-boarding { background-color: #FFF0F4; }
-.fs-card-boarding .fs-icon-circle { background-color: #FA5A7D; color: white; }
-.fs-card-boarding .fs-num { color: #FA5A7D; }
-.fs-card-boarding .fs-name { color: #102E39; }
-.fs-card-boarding .fs-features li::before { background-color: #FA5A7D; }
-.fs-card-boarding .fs-btn { background-color: #FA5A7D; }
+.fs-card-vet .fs-icon-circle {
+    background-color: #2AC5B3;
+    color: white;
+}
 
-.fs-card-walking { background-color: #F2FBF6; }
-.fs-card-walking .fs-icon-circle { background-color: #17B4A2; color: white; }
-.fs-card-walking .fs-num { color: #17B4A2; }
-.fs-card-walking .fs-name { color: #102E39; }
-.fs-card-walking .fs-features li::before { background-color: #17B4A2; }
-.fs-card-walking .fs-btn { background-color: #17B4A2; }
+.fs-card-vet .fs-num {
+    color: #2AC5B3;
+}
 
-.fs-card-grooming { background-color: #FFF9ED; }
-.fs-card-grooming .fs-icon-circle { background-color: #FFB020; color: white; }
-.fs-card-grooming .fs-num { color: #FFB020; }
-.fs-card-grooming .fs-name { color: #102E39; }
-.fs-card-grooming .fs-features li::before { background-color: #FFB020; }
-.fs-card-grooming .fs-btn { background-color: #FFB020; }
+.fs-card-vet .fs-name {
+    color: #102E39;
+}
 
-.fs-card-sitting { background-color: #EDF7F5; }
-.fs-card-sitting .fs-icon-circle { background-color: #2AC5B3; color: white; }
-.fs-card-sitting .fs-num { color: #2AC5B3; }
-.fs-card-sitting .fs-name { color: #102E39; }
-.fs-card-sitting .fs-features li::before { background-color: #2AC5B3; }
-.fs-card-sitting .fs-btn { background-color: #2AC5B3; }
+.fs-card-vet .fs-features li::before {
+    background-color: #2AC5B3;
+}
+
+.fs-card-vet .fs-btn {
+    background-color: #2AC5B3;
+}
+
+.fs-card-boarding {
+    background-color: #FFF0F4;
+}
+
+.fs-card-boarding .fs-icon-circle {
+    background-color: #FA5A7D;
+    color: white;
+}
+
+.fs-card-boarding .fs-num {
+    color: #FA5A7D;
+}
+
+.fs-card-boarding .fs-name {
+    color: #102E39;
+}
+
+.fs-card-boarding .fs-features li::before {
+    background-color: #FA5A7D;
+}
+
+.fs-card-boarding .fs-btn {
+    background-color: #FA5A7D;
+}
+
+.fs-card-walking {
+    background-color: #F2FBF6;
+}
+
+.fs-card-walking .fs-icon-circle {
+    background-color: #17B4A2;
+    color: white;
+}
+
+.fs-card-walking .fs-num {
+    color: #17B4A2;
+}
+
+.fs-card-walking .fs-name {
+    color: #102E39;
+}
+
+.fs-card-walking .fs-features li::before {
+    background-color: #17B4A2;
+}
+
+.fs-card-walking .fs-btn {
+    background-color: #17B4A2;
+}
+
+.fs-card-grooming {
+    background-color: #FFF9ED;
+}
+
+.fs-card-grooming .fs-icon-circle {
+    background-color: #FFB020;
+    color: white;
+}
+
+.fs-card-grooming .fs-num {
+    color: #FFB020;
+}
+
+.fs-card-grooming .fs-name {
+    color: #102E39;
+}
+
+.fs-card-grooming .fs-features li::before {
+    background-color: #FFB020;
+}
+
+.fs-card-grooming .fs-btn {
+    background-color: #FFB020;
+}
+
+.fs-card-sitting {
+    background-color: #EDF7F5;
+}
+
+.fs-card-sitting .fs-icon-circle {
+    background-color: #2AC5B3;
+    color: white;
+}
+
+.fs-card-sitting .fs-num {
+    color: #2AC5B3;
+}
+
+.fs-card-sitting .fs-name {
+    color: #102E39;
+}
+
+.fs-card-sitting .fs-features li::before {
+    background-color: #2AC5B3;
+}
+
+.fs-card-sitting .fs-btn {
+    background-color: #2AC5B3;
+}
 
 .fs-heart-decor {
     position: absolute;
@@ -1949,7 +2043,8 @@ body {
 .fs-banner-section {
     position: relative;
     width: 1920px;
-    padding: 0 100px 100px 100px; /* spacing below the previous section */
+    padding: 0 100px 100px 100px;
+    /* spacing below the previous section */
     box-sizing: border-box;
     display: flex;
     justify-content: center;
