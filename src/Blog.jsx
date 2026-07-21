@@ -12,39 +12,39 @@ export default function Blog() {
   ];
 
   const latestArticles = [
-    { 
-      category: 'Veterinary Advice', title: 'When to Worry: 10 Symptoms You Should Never Ignore', 
-      desc: 'A vet-approved guide to help you recognize serious health issues early.', 
+    {
+      category: 'Veterinary Advice', title: 'When to Worry: 10 Symptoms You Should Never Ignore',
+      desc: 'A vet-approved guide to help you recognize serious health issues early.',
       author: 'Dr. Ananya Rao', date: 'Jun 1 • 7 min', color: '#40843c',
       icon: <path strokeLinecap="round" strokeLinejoin="round" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
     },
-    { 
-      category: 'Behavior & Training', title: 'How to Stop Excessive Barking in 3 Simple Steps', 
-      desc: 'Practical techniques to help your dog stay calm and well-behaved.', 
+    {
+      category: 'Behavior & Training', title: 'How to Stop Excessive Barking in 3 Simple Steps',
+      desc: 'Practical techniques to help your dog stay calm and well-behaved.',
       author: 'Rohit Sharma', date: 'May 30 • 6 min', color: '#0a8775',
       icon: <path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
     },
-    { 
-      category: 'Nutrition', title: 'Homemade Treats Your Pet Will Love', 
-      desc: 'Easy, healthy, and vet-recommended recipes you can make at home.', 
+    {
+      category: 'Nutrition', title: 'Homemade Treats Your Pet Will Love',
+      desc: 'Easy, healthy, and vet-recommended recipes you can make at home.',
       author: 'Megha Iyer', date: 'May 28 • 5 min', color: '#3a63a8',
       icon: <path strokeLinecap="round" strokeLinejoin="round" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
     },
-    { 
-      category: 'Grooming', title: 'Grooming Basics for Every Pet Parent', 
-      desc: 'Simple grooming habits that keep your pet clean, comfy, and confident.', 
+    {
+      category: 'Grooming', title: 'Grooming Basics for Every Pet Parent',
+      desc: 'Simple grooming habits that keep your pet clean, comfy, and confident.',
       author: 'Priya Menon', date: 'May 26 • 6 min', color: '#efc338',
       icon: <path strokeLinecap="round" strokeLinejoin="round" d="M14.121 14.121L19 19m-7-7l7-7m-7 7l-2.879 2.879M12 12L9.121 9.121m0 5.758a3 3 0 10-4.243-4.243 3 3 0 004.243 4.243z" />
     },
-    { 
-      category: 'Pet Care', title: 'Building a Routine That Works for You & Your Pet', 
-      desc: 'Create a daily routine that keeps your pet happy and your life balanced.', 
+    {
+      category: 'Pet Care', title: 'Building a Routine That Works for You & Your Pet',
+      desc: 'Create a daily routine that keeps your pet happy and your life balanced.',
       author: 'Karan Malhotra', date: 'May 24 • 7 min', color: '#9ac14b',
       icon: <path strokeLinecap="round" strokeLinejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
     },
-    { 
-      category: 'Adoption Stories', title: 'Rescue, Love, Repeat: Real Pet Parent Stories', 
-      desc: 'Heartwarming stories from our community that will melt your heart.', 
+    {
+      category: 'Adoption Stories', title: 'Rescue, Love, Repeat: Real Pet Parent Stories',
+      desc: 'Heartwarming stories from our community that will melt your heart.',
       author: 'Neha Kapoor', date: 'May 22 • 6 min', color: '#0eb493',
       icon: <path strokeLinecap="round" strokeLinejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
     }
@@ -52,18 +52,18 @@ export default function Blog() {
 
   return (
     <div className="font-jakarta w-full flex flex-col min-h-screen bg-white relative">
-      
+
       {/* Common Navbar */}
       <Navbar currentPage="blog" />
 
       {/* Main Hero Section */}
       <section className="relative w-full max-w-[1700px] mx-auto px-4 sm:px-6 lg:px-12 pt-32 pb-24 overflow-hidden">
-        
+
         {/* Background elements (Blob on the right) */}
         <div className="absolute right-0 top-0 w-[62%] h-[95%] bg-[#e6f4f0] rounded-tl-[350px] rounded-bl-[120px] -z-10"></div>
-        
+
         <div className="flex flex-col lg:flex-row items-center relative z-10">
-          
+
           {/* Left Column (Content) */}
           <div className="w-full lg:w-[48%] pr-0 lg:pr-12 pt-16">
             {/* Tag */}
@@ -78,18 +78,18 @@ export default function Blog() {
                 <path d="M12 2v6M22 12h-6M6 6l4 4" />
               </svg>
             </div>
-            
+
             {/* Title */}
             <h1 className="font-chewy text-7xl lg:text-[85px] leading-[1.05] text-[#1a2b33] mb-6">
               Everything Your Pet<br />
               Needs, <span className="text-[#0EB493]">All in One Place</span>
             </h1>
-            
+
             {/* Subtitle */}
             <p className="text-gray-500 text-lg lg:text-[20px] leading-relaxed mb-10 max-w-lg">
               Expert tips, trusted services, and a loving community to keep your pet healthy, happy, and cared for.
             </p>
-            
+
             {/* Search Bar */}
             <div className="relative max-w-[500px] mb-12 mt-2">
               <div className="flex items-center bg-white rounded-[24px] shadow-[0_8px_30px_rgba(0,0,0,0.04)] border border-gray-100 p-2.5">
@@ -98,9 +98,9 @@ export default function Blog() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                   </svg>
                 </div>
-                <input 
-                  type="text" 
-                  placeholder="Search articles, guides, more..." 
+                <input
+                  type="text"
+                  placeholder="Search articles, guides, more..."
                   className="flex-1 bg-transparent border-none outline-none px-4 text-gray-700 placeholder-gray-400 text-[17px]"
                 />
                 <button className="bg-[#0EB493] hover:bg-[#0c9c7f] transition-colors text-white font-bold py-3.5 px-8 rounded-2xl text-[16px]">
@@ -108,7 +108,7 @@ export default function Blog() {
                 </button>
               </div>
             </div>
-            
+
             {/* Category Pills */}
             <div className="flex flex-wrap gap-3">
               {['Care Tips', 'Health', 'Training', 'Nutrition', 'Grooming', 'Lifestyle'].map((category) => (
@@ -118,10 +118,10 @@ export default function Blog() {
               ))}
             </div>
           </div>
-          
+
           {/* Right Column (Image and Cards) */}
           <div className="w-full lg:w-[52%] relative mt-16 lg:mt-0 flex justify-center lg:justify-end items-end h-[680px]">
-            
+
             {/* Heart Icon SVG floating */}
             <svg className="absolute left-[5%] top-[25%] w-8 h-8 text-[#0EB493] -rotate-12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
               <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
@@ -131,7 +131,7 @@ export default function Blog() {
             <svg className="absolute right-[28%] top-[15%] w-10 h-10 text-[#0EB493]" viewBox="0 0 40 40" fill="none">
               <path d="M10 20 L15 10 M20 5 L28 14 M35 25 L23 35" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" />
             </svg>
-            
+
             {/* Dot grid floating */}
             <svg className="absolute right-[22%] bottom-[8%] w-32 h-20 text-[#0EB493]" viewBox="0 0 100 60" fill="currentColor">
               {[...Array(4)].map((_, r) => (
@@ -145,12 +145,12 @@ export default function Blog() {
             <img 
               src="https://res.cloudinary.com/dqsyzpxkg/image/upload/v1784566393/4d309321-b954-46c2-9bca-161b251af72c.png" 
               alt="Golden Retriever and Tabby Cat" 
-              className="absolute bottom-0 right-[15%] z-10 w-[115%] max-w-[800px] object-contain object-bottom mix-blend-multiply"
+              className="absolute bottom-0 right-[15%] z-10 w-[115%] max-w-[800px] object-contain object-bottom mix-blend-multiply brightness-105 contrast-105"
             />
-            
+
             {/* Floating Cards */}
             <div className="absolute right-0 top-[10%] flex flex-col gap-6 z-20 w-[300px]">
-              
+
               {/* Card 1 */}
               <div className="bg-white rounded-[24px] p-6 shadow-[0_15px_50px_rgba(0,0,0,0.06)] border border-gray-50/50">
                 <span className="inline-block px-3 py-1 bg-[#e6f4f0] text-[#0EB493] rounded-full text-[11px] font-bold tracking-wide mb-4">
@@ -162,9 +162,7 @@ export default function Blog() {
                 <p className="text-gray-500 text-[14px] mb-5 leading-relaxed">
                   Everything you need to get started
                 </p>
-                <p className="text-gray-400 text-[12px] font-semibold">
-                  8 min read • 12K views
-                </p>
+
               </div>
 
               {/* Card 2 */}
@@ -175,14 +173,11 @@ export default function Blog() {
                 <h3 className="text-[20px] font-bold text-[#1a2b33] mb-5 leading-snug">
                   How Daily Walks Improve Your Dog's Happiness
                 </h3>
-                <p className="text-gray-400 text-[12px] font-semibold">
-                  6 min read • 9.4K views
-                </p>
               </div>
 
             </div>
           </div>
-          
+
         </div>
       </section>
 
@@ -201,7 +196,7 @@ export default function Blog() {
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
           {trendingArticles.map((article) => (
             <div key={article.rank} className="flex flex-col cursor-pointer group">
-              <div 
+              <div
                 className="h-36 rounded-[20px] p-4 flex justify-between items-start relative overflow-hidden transition-transform duration-300 group-hover:-translate-y-1 shadow-sm"
                 style={{ backgroundColor: article.color }}
               >
@@ -236,23 +231,23 @@ export default function Blog() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {latestArticles.map((article, idx) => (
             <div key={idx} className="bg-white rounded-[24px] shadow-[0_4px_25px_rgba(0,0,0,0.04)] border border-gray-100 overflow-hidden flex flex-col cursor-pointer group hover:shadow-[0_8px_35px_rgba(0,0,0,0.08)] transition-shadow duration-300">
-              
+
               {/* Card Header (Colored) */}
               <div className="h-44 relative p-6 flex flex-col justify-end overflow-hidden" style={{ backgroundColor: article.color }}>
                 {/* CSS blob decoration */}
                 <div className="absolute top-[-20%] right-[-10%] w-[120px] h-[120px] bg-white/10 rounded-full blur-xl"></div>
                 <div className="absolute bottom-[-30%] left-[-10%] w-[150px] h-[150px] bg-white/10 rounded-full blur-2xl"></div>
-                
+
                 {/* Icon */}
                 <div className="absolute top-6 right-6">
                   <svg className="w-12 h-12 text-white/90" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5">
                     {article.icon}
                   </svg>
                 </div>
-                
+
                 <span className="text-white text-[13px] font-bold tracking-wide relative z-10">{article.category}</span>
               </div>
-              
+
               {/* Card Body */}
               <div className="p-6 flex-1 flex flex-col">
                 <h3 className="text-[#1a2b33] font-bold text-[22px] mb-3 leading-snug group-hover:text-[#0EB493] transition-colors">
@@ -261,7 +256,7 @@ export default function Blog() {
                 <p className="text-gray-500 text-[15px] mb-8 leading-relaxed flex-1">
                   {article.desc}
                 </p>
-                
+
                 {/* Card Footer */}
                 <div className="flex items-center justify-between pt-5 border-t border-gray-100">
                   <div className="flex items-center gap-3">

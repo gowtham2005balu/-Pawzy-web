@@ -15,11 +15,9 @@ export default function Navbar({ currentPage = 'home' }) {
       </div>
       <ul className="nav-links">
         <li><a href="/" className={currentPage === 'home' ? 'active' : ''}>Home</a></li>
-        <li><a href="#">Service</a></li>
-        <li><a href="/careers.html" className={currentPage === 'careers' ? 'active' : ''}>Careers</a></li>
-        <li><a href="/features.html" className={currentPage === 'features' ? 'active' : ''}>Features</a></li>
+        <li><a href="/features.html" className={currentPage === 'features' ? 'active' : ''}>Service</a></li>
         <li><a href="/about.html" className={currentPage === 'about' ? 'active' : ''}>About us</a></li>
-        <li><a href="/blog.html" className={currentPage === 'blog' ? 'active' : ''}>Blog</a></li>
+        <li><a href="/careers.html" className={currentPage === 'careers' ? 'active' : ''}>Careers</a></li>
       </ul>
       <a href="#" className="btn btn-primary">Download App</a>
     </nav>

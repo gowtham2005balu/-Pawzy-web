@@ -23,8 +23,7 @@ export default function App() {
           {/* Navigation Links */}
           <nav className="hidden md:flex items-center gap-8" style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
             <a href="/" className="text-[#383644] hover:text-[#23B4A2] font-medium text-[15px] transition-colors">Home</a>
-            <a href="#" className="text-[#383644] hover:text-[#23B4A2] font-medium text-[15px] transition-colors">Service</a>
-            <a href="/features.html" className="text-[#383644] hover:text-[#23B4A2] font-medium text-[15px] transition-colors">Features</a>
+            <a href="/features.html" className="text-[#383644] hover:text-[#23B4A2] font-medium text-[15px] transition-colors">Service</a>
             <a href="/about.html" className="text-[#23B4A2] font-medium text-[15px] transition-colors">About us</a>
             <a href="/careers.html" className="text-[#383644] hover:text-[#23B4A2] font-medium text-[15px] transition-colors">Careers</a>
           </nav>
