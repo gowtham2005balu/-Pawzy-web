@@ -39,7 +39,7 @@ export default function Partners() {
                 <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-teal-50/60 rounded-full blur-3xl translate-x-1/3 -translate-y-1/4 pointer-events-none"></div>
                 <div className="absolute top-0 right-1/4 w-[400px] h-[400px] bg-blue-50/40 rounded-full blur-3xl -translate-y-1/2 pointer-events-none"></div>
 
-                <div className="max-w-[1400px] mx-auto px-6 relative z-10 flex flex-col lg:flex-row items-center gap-12">
+                <div className="max-w-[1720px] mx-auto px-6 sm:px-12 lg:px-20 relative z-10 flex flex-col lg:flex-row items-center gap-12">
 
                     <div className="lg:w-[45%]">
                         {/* Breadcrumb */}
@@ -68,55 +68,65 @@ export default function Partners() {
                         </div>
                     </div>
 
-                    <div className="lg:w-[55%] relative flex justify-center items-center mt-10 lg:mt-0">
-                        {/* Abstract grid */}
-                        <div className="absolute top-0 right-0 z-0">
-                            <svg width="80" height="80" viewBox="0 0 60 60" fill="#2dd4bf" opacity="0.4">
-                                {[0, 1, 2, 3].map((row) =>
-                                    [0, 1, 2, 3].map((col) => (
-                                        <circle key={`${row}-${col}`} cx={6 + col * 16} cy={6 + row * 16} r="2.5" />
-                                    ))
-                                )}
-                            </svg>
-                        </div>
+                    <div className="lg:w-[55%] flex justify-center">
+                        <div className="bg-white rounded-[32px] shadow-2xl border border-gray-100 p-8 sm:p-10 w-full max-w-xl">
+                            <h3 className="text-2xl font-bold text-slate-900 mb-2">Become a Partner Today</h3>
+                            <p className="text-gray-400 text-sm font-medium mb-6">Fill in the form and our team will get back to you within 24 hours.</p>
 
-                        {/* Main Hero Image */}
-                        <div className="relative">
-                            <div className="absolute inset-0 bg-teal-50 rounded-[40px] rotate-3 z-0 translate-x-4"></div>
-                            <img src="/Image with Blob.jpg" alt="Partner with pet" className="w-full max-w-[550px] object-cover rounded-[40px] relative z-10 shadow-lg border-4 border-white" onError={(e) => { e.target.src = 'https://placedog.net/600/400?id=12' }} />
-                        </div>
+                            <form className="space-y-4">
+                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                    <div>
+                                        <label className="block text-xs font-bold text-slate-700 mb-1">Full Name</label>
+                                        <input type="text" placeholder="John Doe" className="w-full bg-slate-50 border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-teal-500 font-medium" />
+                                    </div>
+                                    <div>
+                                        <label className="block text-xs font-bold text-slate-700 mb-1">Business Name</label>
+                                        <input type="text" placeholder="Paws & Care Clinic" className="w-full bg-slate-50 border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-teal-500 font-medium" />
+                                    </div>
+                                </div>
 
-                        {/* Floating Pills */}
-                        <div className="absolute top-[15%] left-[5%] bg-white rounded-xl shadow-lg border border-gray-100 p-4 flex items-start gap-3 z-20 max-w-[200px]">
-                            <div className="bg-teal-50 p-2 rounded-lg text-teal-500 shrink-0"><ArrowRight className="w-5 h-5 -rotate-45" /></div>
-                            <div>
-                                <div className="text-[13px] font-bold text-slate-800 mb-1 leading-tight">Grow Your Business</div>
-                                <div className="text-[11px] text-gray-500 font-medium leading-tight">Reach more pet parents and expand your impact.</div>
-                            </div>
-                        </div>
+                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                    <div>
+                                        <label className="block text-xs font-bold text-slate-700 mb-1">Email Address</label>
+                                        <input type="email" placeholder="john@example.com" className="w-full bg-slate-50 border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-teal-500 font-medium" />
+                                    </div>
+                                    <div>
+                                        <label className="block text-xs font-bold text-slate-700 mb-1">Phone Number</label>
+                                        <input type="tel" placeholder="+91 98765 43210" className="w-full bg-slate-50 border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-teal-500 font-medium" />
+                                    </div>
+                                </div>
 
-                        <div className="absolute bottom-[30%] left-[0%] bg-white rounded-xl shadow-lg border border-gray-100 p-4 flex items-start gap-3 z-20 max-w-[200px]">
-                            <div className="bg-teal-50 p-2 rounded-lg text-teal-500 shrink-0"><ShieldCheck className="w-5 h-5" /></div>
-                            <div>
-                                <div className="text-[13px] font-bold text-slate-800 mb-1 leading-tight">Trusted Network</div>
-                                <div className="text-[11px] text-gray-500 font-medium leading-tight">Be part of a verified and reliable community.</div>
-                            </div>
-                        </div>
+                                <div>
+                                    <label className="block text-xs font-bold text-slate-700 mb-1">Partnership Type</label>
+                                    <select className="w-full bg-slate-50 border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-teal-500 font-medium text-gray-600">
+                                        <option>Select a category</option>
+                                        <option>Veterinary Clinic</option>
+                                        <option>Pet Boarding & Daycare</option>
+                                        <option>Pet Grooming</option>
+                                        <option>Pet Food & Nutrition</option>
+                                        <option>Pet Insurance / Health</option>
+                                        <option>Other</option>
+                                    </select>
+                                </div>
 
-                        <div className="absolute top-[40%] right-[-10%] bg-white rounded-xl shadow-lg border border-gray-100 p-4 flex items-start gap-3 z-20 max-w-[200px]">
-                            <div className="bg-teal-50 p-2 rounded-lg text-teal-500 shrink-0"><Heart className="w-5 h-5" /></div>
-                            <div>
-                                <div className="text-[13px] font-bold text-slate-800 mb-1 leading-tight">Make a Difference</div>
-                                <div className="text-[11px] text-gray-500 font-medium leading-tight">Help pets live healthier and happier lives.</div>
-                            </div>
+                                <div>
+                                    <label className="block text-xs font-bold text-slate-700 mb-1">City / Location</label>
+                                    <input type="text" placeholder="Bengaluru, India" className="w-full bg-slate-50 border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-teal-500 font-medium" />
+                                </div>
+
+                                <button type="submit" className="w-full bg-teal-500 hover:bg-teal-600 text-white font-bold py-3.5 rounded-xl transition-colors shadow-sm shadow-teal-200 flex items-center justify-center gap-2 mt-2">
+                                    Submit Application <ArrowRight className="w-4 h-4" />
+                                </button>
+                            </form>
                         </div>
                     </div>
+
                 </div>
 
-                {/* Stats Row */}
-                <div className="max-w-[1400px] mx-auto px-6 mt-24 relative z-10">
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 divide-y md:divide-y-0 md:divide-x divide-gray-100 border-t md:border-t-0 border-gray-100 pt-8 md:pt-0">
-                        <div className="flex items-center gap-4 pt-4 md:pt-0">
+                {/* Counter / Stats Bar */}
+                <div className="max-w-[1720px] mx-auto px-6 sm:px-12 lg:px-20 mt-20 pt-10 border-t border-gray-100 relative z-10">
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-8 divide-y md:divide-y-0 md:divide-x divide-gray-100">
+                        <div className="flex items-center gap-4">
                             <div className="w-14 h-14 bg-teal-50 border border-teal-100 text-teal-500 rounded-xl flex items-center justify-center shrink-0">
                                 <Users className="w-6 h-6" />
                             </div>
@@ -161,7 +171,7 @@ export default function Partners() {
             </section>
 
             {/* ---------------- Partner With Us In Multiple Ways ---------------- */}
-            <section className="max-w-[1400px] mx-auto px-6 py-24">
+            <section className="max-w-[1720px] mx-auto px-6 sm:px-12 lg:px-20 py-24">
                 <div className="text-center mb-16">
                     <h2 className="text-3xl lg:text-[40px] font-bold text-slate-900 mb-4 tracking-tight">Partner With Us In Multiple Ways</h2>
                     <p className="text-gray-500 font-medium text-lg">Choose the partnership type that best fits your business.</p>
@@ -185,7 +195,7 @@ export default function Partners() {
 
             {/* ---------------- Our Valued Partners ---------------- */}
             <section className="bg-white border-y border-gray-100 py-24">
-                <div className="max-w-[1400px] mx-auto px-6">
+                <div className="max-w-[1720px] mx-auto px-6 sm:px-12 lg:px-20">
                     <div className="text-center mb-16">
                         <h2 className="text-3xl lg:text-[40px] font-bold text-slate-900 mb-4 tracking-tight">Our Valued Partners</h2>
                         <p className="text-gray-500 font-medium text-lg">Proud to collaborate with amazing brands and experts.</p>
@@ -222,7 +232,7 @@ export default function Partners() {
             </section>
 
             {/* ---------------- Why Partner With Mungo? ---------------- */}
-            <section className="max-w-[1400px] mx-auto px-6 py-24">
+            <section className="max-w-[1720px] mx-auto px-6 sm:px-12 lg:px-20 py-24">
                 <div className="bg-teal-50 rounded-[40px] flex flex-col lg:flex-row overflow-hidden border border-teal-100">
 
                     <div className="lg:w-1/2 p-10 lg:p-16">

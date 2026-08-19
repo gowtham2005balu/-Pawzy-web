@@ -57,7 +57,7 @@ export default function Blog() {
       <Navbar currentPage="blog" />
 
       {/* Main Hero Section */}
-      <section className="relative w-full max-w-[1700px] mx-auto px-4 sm:px-6 lg:px-12 pt-24 pb-12 sm:pt-28 sm:pb-16 lg:pt-32 lg:pb-24 overflow-hidden">
+      <section className="relative w-full max-w-[1720px] mx-auto px-6 sm:px-12 lg:px-20 pt-28 pb-12 sm:pt-32 sm:pb-16 lg:pt-36 lg:pb-24 overflow-hidden">
 
         {/* Background elements (Blob on the right) */}
         <div className="absolute right-0 top-0 w-full lg:w-[62%] h-[42%] sm:h-[52%] lg:h-[95%] bg-[#e6f4f0] rounded-b-[40px] sm:rounded-b-[80px] lg:rounded-tr-none lg:rounded-bl-[120px] lg:rounded-tl-[350px] -z-10"></div>
@@ -182,7 +182,7 @@ export default function Blog() {
       </section>
 
       {/* Trending Now Section */}
-      <section className="w-full max-w-[1700px] mx-auto px-4 sm:px-6 lg:px-12 py-12 lg:py-16">
+      <section className="w-full max-w-[1720px] mx-auto px-6 sm:px-12 lg:px-20 py-12 lg:py-16">
         <div className="flex flex-row justify-between items-end gap-4 mb-8 lg:mb-10">
           <div>
             <h2 className="text-2xl sm:text-[28px] font-bold text-[#1a2b33] mb-1">Trending Now</h2>
@@ -217,7 +217,7 @@ export default function Blog() {
       </section>
 
       {/* Latest Articles Section */}
-      <section className="w-full max-w-[1700px] mx-auto px-4 sm:px-6 lg:px-12 py-12 lg:py-16 pb-24 lg:pb-32">
+      <section className="w-full max-w-[1720px] mx-auto px-6 sm:px-12 lg:px-20 py-12 lg:py-16 pb-24 lg:pb-32">
         <div className="flex flex-row justify-between items-end gap-4 mb-8 lg:mb-10">
           <div>
             <h2 className="text-2xl sm:text-[28px] font-bold text-[#1a2b33] mb-1">Latest Articles</h2>

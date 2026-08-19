@@ -302,22 +302,22 @@ export default function Careers() {
       <Navbar currentPage="careers" />
 
       {/* ---------------- Hero ---------------- */}
-      <section className="bg-white rounded-b-[40px] shadow-[0_4px_20px_rgba(0,0,0,0.02)] pt-16 pb-20 relative overflow-hidden">
+      <section className="bg-white rounded-b-[40px] shadow-[0_4px_20px_rgba(0,0,0,0.02)] pt-24 pb-20 relative overflow-hidden">
         <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-teal-50/60 rounded-full blur-3xl -translate-y-1/4 translate-x-1/4 pointer-events-none"></div>
 
-        <div className="max-w-[1400px] mx-auto px-6 relative z-10 flex flex-col lg:flex-row items-center gap-12">
+        <div className="max-w-[1720px] mx-auto px-6 sm:px-12 lg:px-20 relative z-10 flex flex-col lg:flex-row items-center gap-12">
 
           <div className="lg:w-1/2">
-            <h1 className="text-[52px] lg:text-[64px] font-extrabold text-[#113c34] leading-[1.1] mb-6 tracking-tight">
+            <h1 className="text-[52px] lg:text-[68px] font-extrabold text-[#113c34] leading-[1.1] mb-6 tracking-tight">
               Build Your Career,<br />
               <span className="text-teal-500">Make Tails Wag</span>
             </h1>
-            <p className="text-gray-500 text-lg leading-relaxed mb-10 max-w-lg font-medium">
+            <p className="text-gray-500 text-lg sm:text-xl leading-relaxed mb-10 max-w-xl font-medium">
               Join Mungo and be part of a team that's passionate about pets and dedicated to making a difference every day.
             </p>
             <button
               onClick={() => document.getElementById('open-positions').scrollIntoView({ behavior: 'smooth' })}
-              className="bg-teal-500 hover:bg-teal-600 text-white font-bold px-8 py-4 rounded-xl shadow-sm transition-colors flex items-center gap-2">
+              className="bg-teal-500 hover:bg-teal-600 text-white font-bold px-8 py-4 rounded-xl shadow-sm transition-colors flex items-center gap-2 text-base">
               View Open Positions <ChevronRight className="w-5 h-5" />
             </button>
           </div>
@@ -333,23 +333,23 @@ export default function Careers() {
               </svg>
             </div>
 
-            <img src="/Image with Blob.jpg" alt="Pets" className="w-[85%] max-w-[500px] object-cover mix-blend-multiply relative z-10" onError={(e) => { e.target.src = 'https://placedog.net/600/400?id=12' }} />
+            <img src="/Image with Blob.jpg" alt="Pets" className="w-[85%] max-w-[540px] object-cover mix-blend-multiply relative z-10" onError={(e) => { e.target.src = 'https://placedog.net/600/400?id=12' }} />
 
-            <div className="absolute top-[10%] left-[5%] bg-white rounded-xl shadow-lg border border-gray-100 p-3 flex items-center gap-3 z-20">
+            <div className="absolute top-[10%] left-[5%] bg-white rounded-xl shadow-lg border border-gray-100 p-3.5 flex items-center gap-3 z-20">
               <div className="text-teal-500"><Heart className="w-5 h-5" /></div>
               <div>
                 <div className="text-[13px] font-bold text-slate-800">Purpose Driven</div>
                 <div className="text-[11px] text-gray-500 font-medium">Work that matters</div>
               </div>
             </div>
-            <div className="absolute bottom-[20%] left-[-5%] bg-white rounded-xl shadow-lg border border-gray-100 p-3 flex items-center gap-3 z-20">
+            <div className="absolute bottom-[20%] left-[-5%] bg-white rounded-xl shadow-lg border border-gray-100 p-3.5 flex items-center gap-3 z-20">
               <div className="text-teal-500"><Smile className="w-5 h-5" /></div>
               <div>
                 <div className="text-[13px] font-bold text-slate-800">Pet Friendly</div>
                 <div className="text-[11px] text-gray-500 font-medium">Pets are family here</div>
               </div>
             </div>
-            <div className="absolute bottom-[40%] right-[0%] bg-white rounded-xl shadow-lg border border-gray-100 p-3 flex items-center gap-3 z-20">
+            <div className="absolute bottom-[40%] right-[0%] bg-white rounded-xl shadow-lg border border-gray-100 p-3.5 flex items-center gap-3 z-20">
               <div className="text-teal-500"><Rocket className="w-5 h-5" /></div>
               <div>
                 <div className="text-[13px] font-bold text-slate-800">Growth Focused</div>
@@ -360,14 +360,14 @@ export default function Careers() {
         </div>
 
         {/* Values Row */}
-        <div className="max-w-[1400px] mx-auto px-6 mt-20 relative z-10">
+        <div className="max-w-[1720px] mx-auto px-6 sm:px-12 lg:px-20 mt-20 relative z-10">
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
             {values.map((v, i) => (
-              <div key={i} className="flex flex-col items-center text-center">
-                <div className="w-14 h-14 bg-teal-50 text-teal-500 rounded-full flex items-center justify-center mb-4">
+              <div key={i} className="flex flex-col items-center text-center p-4 rounded-2xl hover:bg-slate-50 transition-colors">
+                <div className="w-16 h-16 bg-teal-50 text-teal-500 rounded-full flex items-center justify-center mb-4">
                   {v.icon}
                 </div>
-                <h4 className="font-bold text-slate-900 mb-2">{v.title}</h4>
+                <h4 className="font-bold text-slate-900 mb-2 text-base">{v.title}</h4>
                 <p className="text-sm text-gray-500 font-medium">{v.desc}</p>
               </div>
             ))}
@@ -376,13 +376,13 @@ export default function Careers() {
       </section>
 
       {/* ---------------- Main Content Layout ---------------- */}
-      <section id="open-positions" className="max-w-[1400px] mx-auto px-6 py-20">
-        <div className="grid lg:grid-cols-12 gap-10 items-start">
+      <section id="open-positions" className="max-w-[1720px] mx-auto px-6 sm:px-12 lg:px-20 py-20">
+        <div className="grid lg:grid-cols-12 gap-12 items-start">
 
           {/* Left Column - Jobs */}
           <div className="lg:col-span-8">
-            <h2 className="text-3xl font-bold text-slate-900 mb-2">Open Positions</h2>
-            <p className="text-gray-500 font-medium mb-8">
+            <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-2">Open Positions</h2>
+            <p className="text-gray-500 font-medium text-base mb-8">
               Find the perfect role to grow your career while helping pets live their best lives.
             </p>
 
@@ -391,14 +391,14 @@ export default function Careers() {
                 <div
                   key={i}
                   onClick={() => setSelectedJob(job)}
-                  className="bg-white border border-gray-100 rounded-[20px] p-6 shadow-sm hover:shadow-lg hover:border-teal-100 transition-all flex flex-col md:flex-row md:items-center justify-between gap-6 cursor-pointer group"
+                  className="bg-white border border-gray-100 rounded-[24px] p-7 shadow-sm hover:shadow-lg hover:border-teal-100 transition-all flex flex-col md:flex-row md:items-center justify-between gap-6 cursor-pointer group"
                 >
-                  <div className="flex items-start gap-5">
+                  <div className="flex items-start gap-5 flex-1">
                     <div className="w-14 h-14 rounded-2xl bg-teal-50 text-teal-500 flex items-center justify-center shrink-0 border border-teal-100/50 group-hover:bg-teal-500 group-hover:text-white transition-all">
                       <Users className="w-6 h-6" />
                     </div>
-                    <div>
-                      <h3 className="font-bold text-lg text-slate-900 mb-1 group-hover:text-teal-600 transition-colors">{job.title}</h3>
+                    <div className="flex-1">
+                      <h3 className="font-bold text-xl text-slate-900 mb-1.5 group-hover:text-teal-600 transition-colors">{job.title}</h3>
                       <div className="text-sm font-medium text-gray-400 mb-3 flex items-center flex-wrap gap-2">
                         <span>{job.department}</span>
                         <span className="w-1 h-1 rounded-full bg-gray-300"></span>
@@ -406,22 +406,22 @@ export default function Careers() {
                         <span className="w-1 h-1 rounded-full bg-gray-300"></span>
                         <span>{job.location}</span>
                       </div>
-                      <p className="text-gray-500 text-sm font-medium leading-relaxed max-w-xl">
+                      <p className="text-gray-500 text-sm font-medium leading-relaxed max-w-2xl">
                         {job.desc}
                       </p>
                     </div>
                   </div>
 
                   <div className="flex items-center justify-between md:flex-col md:items-end gap-4 shrink-0 border-t md:border-t-0 pt-4 md:pt-0 border-gray-100">
-                    <span className={`px-3 py-1 rounded-full text-xs font-bold tracking-wide 
+                    <span className={`px-3.5 py-1.5 rounded-full text-xs font-bold tracking-wide 
                       ${job.badge === 'On-site' ? 'bg-teal-50 text-teal-600' :
                         job.badge === 'Remote' ? 'bg-blue-50 text-blue-600' : 'bg-amber-50 text-amber-600'}`}>
                       {job.badge}
                     </span>
                     <button
                       onClick={(e) => { e.stopPropagation(); setSelectedJob(job); }}
-                      className="bg-teal-500 hover:bg-teal-600 text-white text-xs font-bold px-4 py-2 rounded-full transition-colors flex items-center gap-1.5 shadow-sm shadow-teal-200">
-                      Apply Now <ChevronRight className="w-3.5 h-3.5" />
+                      className="bg-teal-500 hover:bg-teal-600 text-white text-sm font-bold px-5 py-2.5 rounded-full transition-colors flex items-center gap-1.5 shadow-sm shadow-teal-200">
+                      Apply Now <ChevronRight className="w-4 h-4" />
                     </button>
                   </div>
                 </div>
@@ -429,7 +429,7 @@ export default function Careers() {
             </div>
 
             <div className="mt-8 text-center">
-              <button className="text-teal-500 font-bold border border-teal-500 px-6 py-3 rounded-xl hover:bg-teal-50 transition-colors inline-flex items-center gap-2">
+              <button className="text-teal-500 font-bold border-2 border-teal-500 px-8 py-3.5 rounded-xl hover:bg-teal-50 transition-colors inline-flex items-center gap-2">
                 View All Open Positions <ChevronRight className="w-4 h-4" />
               </button>
             </div>
@@ -439,7 +439,7 @@ export default function Careers() {
           <div className="lg:col-span-4 space-y-6">
 
             {/* Why Work */}
-            <div className="bg-white rounded-[24px] shadow-sm border border-gray-100 p-8">
+            <div className="bg-white rounded-[28px] shadow-sm border border-gray-100 p-8">
               <h3 className="text-xl font-bold text-slate-900 mb-6">Why Work at Mungo?</h3>
               <ul className="space-y-4">
                 {whyWork.map((item, i) => (
@@ -454,27 +454,27 @@ export default function Careers() {
             </div>
 
             {/* Life at Mungo */}
-            <div className="bg-white rounded-[24px] shadow-sm border border-gray-100 p-8">
+            <div className="bg-white rounded-[28px] shadow-sm border border-gray-100 p-8">
               <div className="flex justify-between items-center mb-6">
                 <h3 className="text-xl font-bold text-slate-900">Life at Mungo</h3>
                 <span className="text-teal-500 font-bold text-sm cursor-pointer hover:underline flex items-center gap-1">View Gallery <ChevronRight className="w-4 h-4" /></span>
               </div>
               <div className="grid grid-cols-2 gap-3">
-                <img src="/Image with Blob.jpg" alt="Life" className="w-full h-24 object-cover rounded-xl" onError={(e) => { e.target.src = 'https://placedog.net/600/400?id=12' }} />
-                <img src="/assets/hero.png" alt="Life" className="w-full h-24 object-cover rounded-xl" onError={(e) => { e.target.src = 'https://placedog.net/600/400?id=22' }} />
-                <img src="/assets/corgi.png" alt="Life" className="w-full h-24 object-cover rounded-xl" onError={(e) => { e.target.src = 'https://placedog.net/600/400?id=32' }} />
-                <img src="https://placedog.net/600/400?id=42" alt="Life" className="w-full h-24 object-cover rounded-xl" />
+                <img src="/Image with Blob.jpg" alt="Life" className="w-full h-28 object-cover rounded-xl" onError={(e) => { e.target.src = 'https://placedog.net/600/400?id=12' }} />
+                <img src="/assets/hero.png" alt="Life" className="w-full h-28 object-cover rounded-xl" onError={(e) => { e.target.src = 'https://placedog.net/600/400?id=22' }} />
+                <img src="/assets/corgi.png" alt="Life" className="w-full h-28 object-cover rounded-xl" onError={(e) => { e.target.src = 'https://placedog.net/600/400?id=32' }} />
+                <img src="https://placedog.net/600/400?id=42" alt="Life" className="w-full h-28 object-cover rounded-xl" />
               </div>
             </div>
 
             {/* Not Finding Role */}
-            <div className="bg-teal-50 rounded-[24px] border border-teal-100 p-8 relative overflow-hidden">
+            <div className="bg-teal-50 rounded-[28px] border border-teal-100 p-8 relative overflow-hidden">
               <div className="relative z-10">
                 <h3 className="text-xl font-bold text-teal-900 mb-3">Not Finding the Right Role?</h3>
-                <p className="text-teal-800/70 text-sm font-medium mb-6 leading-relaxed max-w-[240px]">
+                <p className="text-teal-800/70 text-sm font-medium mb-6 leading-relaxed max-w-sm">
                   We're always looking for talented and passionate people. Send us your resume and we'll keep you in mind!
                 </p>
-                <button className="bg-white border-2 border-teal-500 text-teal-600 font-bold px-6 py-3 rounded-xl hover:bg-teal-500 hover:text-white transition-colors flex items-center gap-2">
+                <button className="bg-white border-2 border-teal-500 text-teal-600 font-bold px-6 py-3.5 rounded-xl hover:bg-teal-500 hover:text-white transition-colors flex items-center gap-2">
                   Send Your Resume <Upload className="w-4 h-4" />
                 </button>
               </div>
@@ -489,10 +489,10 @@ export default function Careers() {
       </section>
 
       {/* ---------------- Banner ---------------- */}
-      <section className="max-w-[1400px] mx-auto px-6 pb-20">
-        <div className="bg-teal-50 rounded-[40px] px-8 sm:px-14 py-12 flex flex-col md:flex-row items-center justify-between gap-8 relative overflow-hidden border border-teal-100">
+      <section className="max-w-[1720px] mx-auto px-6 sm:px-12 lg:px-20 pb-20">
+        <div className="bg-teal-50 rounded-[48px] px-8 sm:px-14 py-14 flex flex-col md:flex-row items-center justify-between gap-8 relative overflow-hidden border border-teal-100">
           <div className="text-center md:text-left z-10 flex-1">
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-[#113c34] mb-3">Ready to make tails wag?</h2>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#113c34] mb-3">Ready to make tails wag?</h2>
             <p className="text-teal-800/70 font-medium text-base sm:text-lg max-w-xl">Join our mission to bring happiness to pets and pet parents everywhere.</p>
           </div>
 

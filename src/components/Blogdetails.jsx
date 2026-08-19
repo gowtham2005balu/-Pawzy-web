@@ -43,7 +43,7 @@ export default function Blogdetails() {
     <div className="bg-slate-50 min-h-screen font-sans text-slate-800 flex flex-col">
       <Navbar currentPage="blog" />
 
-      <main className="max-w-[1200px] mx-auto px-6 pt-32 pb-20 flex-1">
+      <main className="max-w-[1720px] mx-auto px-6 sm:px-12 lg:px-20 pt-32 pb-20 flex-1">
 
         {/* ---------------- Breadcrumb ---------------- */}
         <div className="flex items-center gap-2 text-sm font-medium text-gray-400 mb-8">

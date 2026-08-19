@@ -27,8 +27,8 @@ export default function HowItWorks() {
       </section>
 
       {/* Main Process Section */}
-      <section className="py-24 px-6 lg:px-8 bg-white">
-        <div className="max-w-7xl mx-auto">
+      <section className="py-24 px-6 sm:px-12 lg:px-20 bg-white">
+        <div className="max-w-[1720px] mx-auto">
           <div className="text-center mb-20">
             <h2 className="text-3xl md:text-5xl font-bold text-[#1E293B] mb-4">
               For Pet Parents
@@ -79,8 +79,8 @@ export default function HowItWorks() {
       </section>
 
       {/* For Caregivers Section */}
-      <section className="py-24 px-6 lg:px-8 bg-slate-50 border-t border-gray-100">
-        <div className="max-w-7xl mx-auto">
+      <section className="py-24 px-6 sm:px-12 lg:px-20 bg-slate-50 border-t border-gray-100">
+        <div className="max-w-[1720px] mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
               <span className="text-[#FF6B82] font-bold uppercase tracking-wider text-sm mb-3 block">

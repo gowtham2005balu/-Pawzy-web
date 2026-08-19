@@ -32,7 +32,7 @@ export default function PrivacyPolicy() {
                 <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-teal-50/60 rounded-full blur-3xl translate-x-1/3 -translate-y-1/4 pointer-events-none"></div>
                 <div className="absolute top-0 right-1/4 w-[400px] h-[400px] bg-blue-50/40 rounded-full blur-3xl -translate-y-1/2 pointer-events-none"></div>
 
-                <div className="max-w-[1400px] mx-auto px-6 relative z-10 flex flex-col lg:flex-row items-center gap-12">
+                <div className="max-w-[1720px] mx-auto px-6 sm:px-12 lg:px-20 relative z-10 flex flex-col lg:flex-row items-center gap-12">
 
                     <div className="lg:w-1/2">
                         {/* Breadcrumb */}
@@ -57,7 +57,7 @@ export default function PrivacyPolicy() {
                 </div>
 
                 {/* Hero Stat Cards */}
-                <div className="max-w-[1400px] mx-auto px-6 mt-16 relative z-10">
+                <div className="max-w-[1720px] mx-auto px-6 sm:px-12 lg:px-20 mt-16 relative z-10">
                     <div className="grid md:grid-cols-3 gap-6">
                         <div className="bg-white border border-gray-100 rounded-[20px] p-6 shadow-[0_4px_20px_rgba(0,0,0,0.03)] flex gap-4 items-center">
                             <div className="text-teal-500 shrink-0"><Lock className="w-8 h-8" /></div>
@@ -69,16 +69,15 @@ export default function PrivacyPolicy() {
                         <div className="bg-white border border-gray-100 rounded-[20px] p-6 shadow-[0_4px_20px_rgba(0,0,0,0.03)] flex gap-4 items-center">
                             <div className="text-teal-500 shrink-0"><Shield className="w-8 h-8" /></div>
                             <div>
-                                <h3 className="font-bold text-slate-900 mb-1">GDPR Ready</h3>
-                                <p className="text-gray-500 text-[13px] font-medium leading-relaxed">We comply with global data protection regulations.</p>
+                                <h3 className="font-bold text-slate-900 mb-1">No Selling of Data</h3>
+                                <p className="text-gray-500 text-[13px] font-medium leading-relaxed">We will never sell your personal information to third parties.</p>
                             </div>
                         </div>
                         <div className="bg-white border border-gray-100 rounded-[20px] p-6 shadow-[0_4px_20px_rgba(0,0,0,0.03)] flex gap-4 items-center">
-                            <div className="text-teal-500 shrink-0"><Calendar className="w-8 h-8" /></div>
+                            <div className="text-teal-500 shrink-0"><CheckCircle2 className="w-8 h-8" /></div>
                             <div>
-                                <h3 className="font-bold text-slate-900 mb-1">Updated</h3>
-                                <p className="text-gray-500 text-[13px] font-medium leading-relaxed mb-0.5">June 1, 2026</p>
-                                <p className="text-gray-400 text-[11px] font-medium">Last updated</p>
+                                <h3 className="font-bold text-slate-900 mb-1">User Control</h3>
+                                <p className="text-gray-500 text-[13px] font-medium leading-relaxed">You have full control over your data and communication preferences.</p>
                             </div>
                         </div>
                     </div>
@@ -86,7 +85,7 @@ export default function PrivacyPolicy() {
             </section>
 
             {/* ---------------- Main Content Layout ---------------- */}
-            <section className="max-w-[1400px] mx-auto px-6 py-20">
+            <section className="max-w-[1720px] mx-auto px-6 sm:px-12 lg:px-20 py-20">
                 <div className="grid lg:grid-cols-12 gap-10 items-start">
 
                     {/* Left Sidebar */}

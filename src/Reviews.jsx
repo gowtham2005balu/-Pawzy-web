@@ -108,7 +108,7 @@ export default function Reviews() {
       </section>
 
       {/* ---------------- Testimonials Grid ---------------- */}
-      <section className="py-20 px-6 lg:px-8 max-w-[1400px] mx-auto">
+      <section className="py-20 px-6 sm:px-12 lg:px-20 max-w-[1720px] mx-auto">
 
         {/* Filters */}
         <div className="flex flex-wrap items-center justify-center gap-3 mb-16">
