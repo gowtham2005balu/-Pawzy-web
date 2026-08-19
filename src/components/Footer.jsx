@@ -2,23 +2,27 @@ import React, { useState } from 'react';
 
 export default function Footer() {
   const [email, setEmail] = useState('');
+  const [subscribed, setSubscribed] = useState(false);
 
   const handleSubscribe = (e) => {
     e.preventDefault();
     if (email.trim()) {
-      alert(`Subscribed: ${email}`);
-      setEmail('');
+      setSubscribed(true);
+      setTimeout(() => {
+        setSubscribed(false);
+        setEmail('');
+      }, 4000);
     }
   };
 
   return (
-    <footer className="bg-white border-t border-slate-100 font-sans text-slate-700">
+    <footer className="bg-white border-t border-slate-100 font-sans text-slate-700 w-full">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 sm:py-20">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8">
           {/* Brand Column */}
-          <div className="lg:col-span-4 lg:pr-8">
-            <a href="/" className="inline-flex items-center gap-2.5 mb-5 no-underline">
-              <div className="w-9 h-9 rounded-xl flex items-center justify-center overflow-hidden">
+          <div className="lg:col-span-4 lg:pr-8 flex flex-col items-start text-left">
+            <a href="/" className="inline-flex items-center gap-3 mb-5 no-underline group">
+              <div className="w-10 h-10 rounded-xl bg-teal-50 border border-teal-100 flex items-center justify-center p-1.5 overflow-hidden transition-transform group-hover:scale-105">
                 <img
                   src="https://res.cloudinary.com/dqsyzpxkg/image/upload/v1784019754/a44962e9-259e-4885-a21c-31063e437a8a.png"
                   alt="Mungo Logo"
@@ -29,57 +33,83 @@ export default function Footer() {
                 Mungo
               </span>
             </a>
-            <p className="text-slate-500 font-medium leading-relaxed mb-6 text-[15px]">
+            <p className="text-slate-500 font-medium leading-relaxed mb-6 text-[15px] text-left">
               Better care. Happier pets.<br />Stronger bond.
             </p>
-            <div className="flex items-center gap-3 text-slate-400">
+            <div className="flex items-center gap-3 text-slate-500">
               <a
-                href="#"
-                className="w-9 h-9 rounded-full bg-slate-50 border border-slate-100 flex items-center justify-center font-bold text-xs hover:bg-teal-500 hover:text-white hover:border-teal-500 transition-colors no-underline text-slate-500"
+                href="https://facebook.com"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Facebook"
+                className="w-10 h-10 rounded-full bg-[#F5F7F9] hover:bg-[#23B4A2] hover:text-white flex items-center justify-center text-slate-600 transition-all shadow-sm hover:scale-110 no-underline"
               >
-                f
+                <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                  <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                </svg>
               </a>
               <a
-                href="#"
-                className="w-9 h-9 rounded-full bg-slate-50 border border-slate-100 flex items-center justify-center font-bold text-xs hover:bg-teal-500 hover:text-white hover:border-teal-500 transition-colors no-underline text-slate-500"
+                href="https://twitter.com"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Twitter / X"
+                className="w-10 h-10 rounded-full bg-[#F5F7F9] hover:bg-[#23B4A2] hover:text-white flex items-center justify-center text-slate-600 transition-all shadow-sm hover:scale-110 no-underline"
               >
-                t
+                <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                </svg>
               </a>
               <a
-                href="#"
-                className="w-9 h-9 rounded-full bg-slate-50 border border-slate-100 flex items-center justify-center font-bold text-xs hover:bg-teal-500 hover:text-white hover:border-teal-500 transition-colors no-underline text-slate-500"
+                href="https://instagram.com"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Instagram"
+                className="w-10 h-10 rounded-full bg-[#F5F7F9] hover:bg-[#23B4A2] hover:text-white flex items-center justify-center text-slate-600 transition-all shadow-sm hover:scale-110 no-underline"
               >
-                i
+                <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                </svg>
+              </a>
+              <a
+                href="https://linkedin.com"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="LinkedIn"
+                className="w-10 h-10 rounded-full bg-[#F5F7F9] hover:bg-[#23B4A2] hover:text-white flex items-center justify-center text-slate-600 transition-all shadow-sm hover:scale-110 no-underline"
+              >
+                <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                  <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76c.9 0 1.63-.73 1.63-1.63s-.73-1.63-1.63-1.63c-.9 0-1.63.73-1.63 1.63s.73 1.63 1.63 1.63m1.4 9.74v-8.37H5.06v8.37h2.8z"/>
+                </svg>
               </a>
             </div>
           </div>
 
           {/* Quick Links Column */}
-          <div className="lg:col-span-2">
-            <h4 className="font-bold text-[17px] mb-5 text-slate-900 font-jakarta">Quick Links</h4>
+          <div className="lg:col-span-2 text-left">
+            <h4 className="font-bold text-[17px] mb-5 text-[#102E39] font-jakarta">Quick Links</h4>
             <ul className="space-y-3.5 list-none m-0 p-0 font-semibold text-slate-500 text-[14.5px]">
-              <li><a href="/" className="hover:text-teal-500 transition-colors">Home</a></li>
-              <li><a href="/features.html" className="hover:text-teal-500 transition-colors">Services</a></li>
-              <li><a href="/how-it-works.html" className="hover:text-teal-500 transition-colors">How It Works</a></li>
-              <li><a href="/reviews.html" className="hover:text-teal-500 transition-colors">Reviews</a></li>
-              <li><a href="/blog.html" className="hover:text-teal-500 transition-colors">Blog</a></li>
+              <li><a href="/" className="hover:text-[#23B4A2] transition-colors no-underline">Home</a></li>
+              <li><a href="/features.html" className="hover:text-[#23B4A2] transition-colors no-underline">Services</a></li>
+              <li><a href="/how-it-works.html" className="hover:text-[#23B4A2] transition-colors no-underline">How It Works</a></li>
+              <li><a href="/reviews.html" className="hover:text-[#23B4A2] transition-colors no-underline">Reviews</a></li>
+              <li><a href="/blog.html" className="hover:text-[#23B4A2] transition-colors no-underline">Blog</a></li>
             </ul>
           </div>
 
           {/* Company Column */}
-          <div className="lg:col-span-2">
-            <h4 className="font-bold text-[17px] mb-5 text-slate-900 font-jakarta">Company</h4>
+          <div className="lg:col-span-2 text-left">
+            <h4 className="font-bold text-[17px] mb-5 text-[#102E39] font-jakarta">Company</h4>
             <ul className="space-y-3.5 list-none m-0 p-0 font-semibold text-slate-500 text-[14.5px]">
-              <li><a href="/about.html" className="hover:text-teal-500 transition-colors">About Us</a></li>
-              <li><a href="/careers.html" className="hover:text-teal-500 transition-colors">Careers</a></li>
-              <li><a href="/terms.html" className="hover:text-teal-500 transition-colors">Terms of Service</a></li>
-              <li><a href="/privacy.html" className="hover:text-teal-500 transition-colors">Privacy Policy</a></li>
+              <li><a href="/about.html" className="hover:text-[#23B4A2] transition-colors no-underline">About Us</a></li>
+              <li><a href="/careers.html" className="hover:text-[#23B4A2] transition-colors no-underline">Careers</a></li>
+              <li><a href="/terms.html" className="hover:text-[#23B4A2] transition-colors no-underline">Terms of Service</a></li>
+              <li><a href="/privacy.html" className="hover:text-[#23B4A2] transition-colors no-underline">Privacy Policy</a></li>
             </ul>
           </div>
 
           {/* Subscribe Column */}
-          <div className="lg:col-span-4">
-            <h4 className="font-bold text-[17px] mb-3 text-slate-900 font-jakarta">Stay in the loop</h4>
+          <div className="lg:col-span-4 text-left">
+            <h4 className="font-bold text-[17px] mb-3 text-[#102E39] font-jakarta">Stay in the loop</h4>
             <p className="text-slate-500 font-medium mb-5 text-[14.5px] leading-relaxed">
               Get pet care tips, offers and updates straight to your inbox.
             </p>
@@ -90,13 +120,13 @@ export default function Footer() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
-                className="bg-slate-50 border border-slate-200/80 rounded-xl px-4 py-3.5 outline-none focus:border-teal-500 focus:bg-white transition-colors w-full font-medium text-[14.5px] text-slate-800"
+                className="bg-slate-50 border border-slate-200/90 rounded-xl px-4 py-3.5 outline-none focus:border-[#23B4A2] focus:bg-white focus:ring-2 focus:ring-[#23B4A2]/20 transition-all w-full font-medium text-[14.5px] text-slate-800"
               />
               <button
                 type="submit"
-                className="bg-teal-500 hover:bg-teal-600 text-white font-bold rounded-xl px-4 py-3.5 transition-colors w-full text-[14.5px] shadow-sm shadow-teal-500/20"
+                className="bg-[#23B4A2] hover:bg-[#1fa190] text-white font-bold rounded-xl px-4 py-3.5 transition-all w-full text-[15px] shadow-sm shadow-[#23B4A2]/20 active:scale-[0.99] cursor-pointer"
               >
-                Subscribe
+                {subscribed ? '✓ Subscribed!' : 'Subscribe'}
               </button>
             </form>
           </div>
@@ -105,9 +135,16 @@ export default function Footer() {
 
       {/* Copyright Bar */}
       <div className="border-t border-slate-100 py-6 px-4">
-        <p className="text-center text-slate-400 font-medium text-[13.5px] m-0">
-          &copy; 2026 Mungo. All rights reserved.
-        </p>
+        <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-slate-400 font-medium text-[13.5px]">
+          <p className="m-0 text-center sm:text-left">
+            &copy; 2026 Mungo. All rights reserved.
+          </p>
+          <div className="flex items-center gap-6">
+            <a href="/terms.html" className="hover:text-[#23B4A2] transition-colors no-underline">Terms</a>
+            <a href="/privacy.html" className="hover:text-[#23B4A2] transition-colors no-underline">Privacy</a>
+            <a href="/about.html" className="hover:text-[#23B4A2] transition-colors no-underline">About</a>
+          </div>
+        </div>
       </div>
     </footer>
   );
