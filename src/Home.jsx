@@ -51,7 +51,7 @@ const pillars = [
   const services = [
   {
     id: "grooming",
-    href: "/become-groomer",
+    href: "/grooming",
     title: "Fresh, clean, happy.",
     desc: "Book trusted groomers who treat every visit like your pet's own spa day.",
     cta: "Explore grooming",
@@ -60,7 +60,7 @@ const pillars = [
   },
   {
     id: "vet",
-    href: "/become-vet",
+    href: "/veterinary-care",
     title: "Expert care when it matters.",
     desc: "Connect with veterinary professionals for check-ups and care your pet can count on.",
     cta: "Explore vet care",
@@ -69,7 +69,7 @@ const pillars = [
   },
   {
     id: "boarding",
-    href: "/become-boarding",
+    href: "/pet-boarding",
     title: "A comfortable home away from home.",
     desc: "Safe, welcoming spaces for your pet to stay when you can't be there.",
     cta: "Explore boarding",
@@ -78,7 +78,7 @@ const pillars = [
   },
   {
     id: "sitting",
-    href: "/become-sitter",
+    href: "/pet-sitting",
     title: "Expert care when it matters.",
     desc: "Connect with veterinary professionals for check-ups and care your pet can count on.",
     cta: "Explore sitting",
@@ -87,7 +87,7 @@ const pillars = [
   },
   {
     id: "walking",
-    href: "/become-walker",
+    href: "/dog-walking",
     title: "Because every walk matters.",
     desc: "Reliable walkers who keep your dog active, happy, and on schedule.",
     cta: "Explore walking",
